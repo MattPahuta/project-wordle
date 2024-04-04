@@ -8,7 +8,6 @@ function GuessInput({handleSubmitGuess, gameStatus}) {
     event.preventDefault();
     handleSubmitGuess(preliminaryGuess);
     setPreliminaryGuess('');
-    console.log('preliminary gueess: ', preliminaryGuess)
   }
 
   return (
