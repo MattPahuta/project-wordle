@@ -8,6 +8,7 @@ import GuessInput from '../GuessInput/GuessInput';
 import PreviousGuesses from '../PreviousGuesses/PreviousGuesses';
 import WonBanner from '../WonBanner/WonBanner';
 import LostBanner from '../LostBanner/LostBanner';
+import Keyboard from '../Keyboard/Keyboard';
 
 // Pick a random word on every pageload.
 // const answer = sample(WORDS);
@@ -46,6 +47,7 @@ function Game() {
     <>
       <PreviousGuesses validatedGuesses={validatedGuesses} />
       <GuessInput handleSubmitGuess={handleSubmitGuess} gameStatus={gameStatus} />
+      <Keyboard validatedGuesses={validatedGuesses}/>
       {gameStatus === 'won' && (
         <WonBanner 
           numOfGuesses={guesses.length}
